@@ -18,6 +18,6 @@ logging:
   level:
     root: INFO
 
-# Ví dụ import “shared” (tùy bạn dùng hay không)
-spring.config.import:
-  - optional:configserver: # cho client khác; riêng ở đây chỉ là ví dụ
+# Ví dụ import "shared" (tùy bạn dùng hay không)
+# spring.config.import:
+#   - optional:configserver: # cho client khác; riêng ở đây chỉ là ví dụ
