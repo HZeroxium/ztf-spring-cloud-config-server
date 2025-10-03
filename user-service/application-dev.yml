@@ -1,0 +1,9 @@
+user:
+  http:
+    timeout-ms: 5000
+  features:
+    enable-bulk-create: true
+
+logging:
+  level:
+    com.example.user: DEBUG

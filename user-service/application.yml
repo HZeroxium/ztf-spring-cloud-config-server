@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:postgres}:${DB_PORT:5432}/users
+    username: ${DB_USER:user}
+    password: "{cipher}AQB1Lq...==" # Mã hóa bằng /encrypt
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+user:
+  http:
+    timeout-ms: 2000
+  features:
+    enable-bulk-create: false
