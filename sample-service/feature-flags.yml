@@ -1,0 +1,17 @@
+# sample-service/feature-flags.yml - Feature flags configuration
+feature:
+  dark-mode: false
+  new-endpoint-v2: false
+  use-cache-v1: true
+  experimental-feature: false
+  beta-features:
+    enabled: false
+    allowed-users: []
+  
+# A/B Testing configuration
+ab-testing:
+  enabled: true
+  variants:
+    control: 50
+    variant-a: 25
+    variant-b: 25

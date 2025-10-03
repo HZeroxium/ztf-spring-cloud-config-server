@@ -1,0 +1,22 @@
+# sample-service/application.yml - Base configuration
+greeting:
+  message: "Hello from ConfigRepo"
+  delay-ms: 250
+  timeout-ms: 5000
+  enabled: true
+
+feature:
+  dark-mode: false
+  new-endpoint-v2: false
+  use-cache-v1: true
+
+# Business configuration
+business:
+  max-retries: 3
+  cache-ttl-seconds: 3600
+  rate-limit-per-minute: 100
+
+# Logging configuration
+logging:
+  level:
+    com.example.sample: INFO

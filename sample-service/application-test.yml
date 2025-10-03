@@ -1,0 +1,23 @@
+# sample-service/application-test.yml - Test configuration
+greeting:
+  message: "Hello from ConfigRepo (TEST)"
+  delay-ms: 0
+  timeout-ms: 1000
+  enabled: true
+
+feature:
+  dark-mode: false
+  new-endpoint-v2: false
+  use-cache-v1: false
+
+# Test-specific settings
+business:
+  max-retries: 1
+  cache-ttl-seconds: 1
+  rate-limit-per-minute: 999999
+
+# Test logging
+logging:
+  level:
+    com.example.sample: INFO
+    root: WARN

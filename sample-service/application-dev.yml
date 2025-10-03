@@ -1,0 +1,23 @@
+# sample-service/application-dev.yml - Development overrides
+greeting:
+  message: "Hello from ConfigRepo (DEV)"
+  delay-ms: 100
+  timeout-ms: 3000
+  enabled: true
+
+feature:
+  dark-mode: true
+  new-endpoint-v2: true
+  use-cache-v1: false
+
+# Development-specific settings
+business:
+  max-retries: 1
+  cache-ttl-seconds: 60
+  rate-limit-per-minute: 1000
+
+# Debug logging for development
+logging:
+  level:
+    com.example.sample: DEBUG
+    org.springframework.cloud.config: DEBUG

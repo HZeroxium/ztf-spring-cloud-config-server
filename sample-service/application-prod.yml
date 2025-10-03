@@ -1,0 +1,23 @@
+# sample-service/application-prod.yml - Production configuration
+greeting:
+  message: "Hello from ConfigRepo (PROD)"
+  delay-ms: 150
+  timeout-ms: 10000
+  enabled: true
+
+feature:
+  dark-mode: false
+  new-endpoint-v2: false
+  use-cache-v1: true
+
+# Production settings
+business:
+  max-retries: 5
+  cache-ttl-seconds: 7200
+  rate-limit-per-minute: 50
+
+# Production logging
+logging:
+  level:
+    com.example.sample: WARN
+    root: WARN
