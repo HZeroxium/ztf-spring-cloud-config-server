@@ -1,3 +1,5 @@
+# application-dev.yml
+
 logging:
   level:
     root: DEBUG
@@ -6,3 +8,11 @@ management:
   endpoint:
     health:
       show-details: always
+
+# Override some global
+global:
+  prop1: "global-prop1 from application-dev.yml"
+  
+# Define a dev-only prop at global level
+shared:
+  devOnly: "shared-dev-only from application-dev.yml"

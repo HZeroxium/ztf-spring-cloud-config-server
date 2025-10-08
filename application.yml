@@ -1,3 +1,5 @@
+# application.yml
+
 spring:
   jackson:
     serialization:
@@ -18,6 +20,9 @@ logging:
   level:
     root: INFO
 
-# Ví dụ import "shared" (tùy bạn dùng hay không)
-# spring.config.import:
-#   - optional:configserver: # cho client khác; riêng ở đây chỉ là ví dụ
+global:
+  prop1: "global-prop1 from application.yml"
+  propOnlyInApp: "only-in-app from application.yml"
+  
+shared:
+  defaultMsg: "default-shared from application.yml"

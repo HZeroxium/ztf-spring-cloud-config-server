@@ -21,3 +21,7 @@ logging:
   level:
     com.example.sample: DEBUG
     org.springframework.cloud.config: DEBUG
+
+
+service:
+  prop2: "service-dev-prop2 from sample/application-dev.yml"

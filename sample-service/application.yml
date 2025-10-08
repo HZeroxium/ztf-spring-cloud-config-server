@@ -20,3 +20,10 @@ business:
 logging:
   level:
     com.example.sample: INFO
+
+service:
+  prop2: "service-default-prop2 from sample/application.yml"
+  propOnlyInService: "only-in-service-default from sample/application.yml"
+
+shared:
+  defaultMsg: "shared-default-from-service from sample/application.yml"
