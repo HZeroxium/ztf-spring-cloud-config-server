@@ -1,6 +1,6 @@
 # sample-service/application-dev.yml - Development overrides
 greeting:
-  message: "Hello from ConfigRepo (DEV) V12"
+  message: "Hello from ConfigRepo (DEV) V13"
   delay-ms: 100
   timeout-ms: 3000
   enabled: true
