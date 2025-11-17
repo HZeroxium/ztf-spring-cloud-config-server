@@ -34,7 +34,7 @@ demo:
     backgroundColor: "#E8F5E9"
     textColor: "#1B5E20"
   banner:
-    text: "Development Environment"
+    text: "Developmentt Environment"
     show: true
     logoUrl: "https://via.placeholder.com/64x64/4CAF50/FFFFFF?text=DEV"
   metrics:
