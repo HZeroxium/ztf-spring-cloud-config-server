@@ -25,3 +25,21 @@ logging:
 
 service:
   prop2: "service-dev-prop2 from sample/application-dev.yml"
+
+# Demo visualization configuration (dev)
+demo:
+  theme:
+    primaryColor: "#4CAF50"  # Green for dev
+    secondaryColor: "#81C784"
+    backgroundColor: "#E8F5E9"
+    textColor: "#1B5E20"
+  banner:
+    text: "Development Environment"
+    show: true
+    logoUrl: "https://via.placeholder.com/64x64/4CAF50/FFFFFF?text=DEV"
+  metrics:
+    retryCount: 3
+    cacheTtl: 300
+  status:
+    badge: "DEVELOPMENT"
+    badgeColor: "#4CAF50"

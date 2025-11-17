@@ -21,3 +21,21 @@ logging:
   level:
     com.example.sample: WARN
     root: WARN
+
+# Demo visualization configuration (prod)
+demo:
+  theme:
+    primaryColor: "#F44336"  # Red for prod
+    secondaryColor: "#E57373"
+    backgroundColor: "#FFEBEE"
+    textColor: "#B71C1C"
+  banner:
+    text: "Production Environment"
+    show: true
+    logoUrl: "https://via.placeholder.com/64x64/F44336/FFFFFF?text=PROD"
+  metrics:
+    retryCount: 5
+    cacheTtl: 7200
+  status:
+    badge: "PRODUCTION"
+    badgeColor: "#F44336"
