@@ -28,15 +28,15 @@ demo:
     primaryColor: "#F44336"  # Red for prod
     # primaryColor: "#2196F3" # Blue 
     secondaryColor: "#E57373"
-    # backgroundColor: "#FFEBEE" # Light Red
-    backgroundColor: "#2196F3" # Blue
+    backgroundColor: "#FFEBEE" # Light Red
+    # backgroundColor: "#2196F3" # Blue
     textColor: "#B71C1C"
   banner:
     text: "Production Environment"
     show: true
     logoUrl: "https://via.placeholder.com/64x64/F44336/FFFFFF?text=PROD"
   metrics:
-    retryCount: 5
+    retryCount: 10
     cacheTtl: 7200
   status:
     badge: "PRODUCTION"
