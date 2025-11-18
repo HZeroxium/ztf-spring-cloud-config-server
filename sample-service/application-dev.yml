@@ -31,14 +31,14 @@ demo:
   theme:
     primaryColor: "#4CAF50"  # Green for dev
     secondaryColor: "#81C784"
-    backgroundColor: "#E8F5E9"
+    backgroundColor: "#2196F3" # Blue 
     textColor: "#1B5E20"
   banner:
     text: "Developmentt Environment"
     show: true
     logoUrl: "https://via.placeholder.com/64x64/4CAF50/FFFFFF?text=DEV"
   metrics:
-    retryCount: 3
+    retryCount: 30
     cacheTtl: 300
   status:
     badge: "DEVELOPMENT"
