@@ -26,6 +26,7 @@ logging:
 demo:
   theme:
     primaryColor: "#F44336"  # Red for prod
+    # primaryColor: "#2196F3"
     secondaryColor: "#E57373"
     backgroundColor: "#FFEBEE"
     textColor: "#B71C1C"
