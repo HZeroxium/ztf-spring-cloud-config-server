@@ -35,11 +35,11 @@ demo:
     backgroundColor: "#E8F5E9"
     # textColor: "#1B5E20"
   banner:
-    text: "Developmentt Environment"
+    text: "Development Environment"
     show: true
     logoUrl: "https://via.placeholder.com/64x64/4CAF50/FFFFFF?text=DEV"
   metrics:
-    retryCount: 30
+    retryCount: 3000
     cacheTtl: 300
   status:
     badge: "DEVELOPMENT"
