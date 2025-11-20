@@ -28,8 +28,8 @@ demo:
     primaryColor: "#F44336"  # Red for prod
     # primaryColor: "#2196F3" # Blue 
     secondaryColor: "#E57373"
-    # backgroundColor: "#FFEBEE" # Light Red
-    backgroundColor: "#2196F3" # Blue
+    backgroundColor: "#FFEBEE" # Light Red
+    # backgroundColor: "#2196F3" # Blue
     textColor: "#B71C1C"
   banner:
     text: "Production Environment"
