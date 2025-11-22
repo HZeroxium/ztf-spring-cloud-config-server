@@ -1,0 +1,78 @@
+# sample-service-1 - Base configuration
+# Generated config file for service: sample-service-1
+# Environments: dev, staging, prod
+
+spring:
+  application:
+    name: sample-service-1
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  main:
+    banner-mode: "off"
+  threads:
+    virtual:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,env,prometheus"
+
+logging:
+  level:
+    root: INFO
+    com.example.sample-service-1: INFO
+
+# ZCM SDK Configuration
+# This section configures the ZCM SDK for configuration management and service discovery
+zcm:
+  sdk:
+    service:
+      name: sample-service-1
+    config:
+      server:
+        url: ${CONFIG_SERVER_URL:http://config-server:8888}
+    control:
+      url: ${CONFIG_CONTROL_URL:http://config-control-service:8080}
+    ping:
+      enabled: true
+      fixed-delay: 30000  # 30 seconds
+      protocol: HTTP  # Options: HTTP, THRIFT, GRPC, KAFKA
+      service-discovery-name: config-control-service
+      # Client credentials for M2M authentication
+      # Uncomment and fill in after activating credentials via POST /api/services/{serviceId}/credentials/activate
+      client-credentials:
+        required: true
+        client-id: sample-service-1
+        # client-secret: <your-client-secret>  # Get from GET /api/services/sample-service-1/credentials
+        token-endpoint: http://10.40.30.161:28080/realms/config-control/protocol/openid-connect/token
+        realm: config-control
+    bus:
+      refresh:
+        enabled: true
+        topic: springCloudBus
+      kafka:
+        bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
+    discovery:
+      provider: CONSUL
+      consul:
+        host: ${CONSUL_HOST:localhost}
+        port: ${CONSUL_PORT:8500}
+        register: true
+        heartbeat:
+          enabled: true
+          ttl: 10s
+
+# Service-specific configuration
+service:
+  id: sample-service-1
+  name: sample-service-1
+  version: 1.0.0
+
+# Configuration Instructions:
+# 1. After approval, retrieve client credentials: GET /api/services/sample-service-1/credentials
+# 2. Uncomment and fill in the client-credentials section above
+# 3. Activate credentials: POST /api/services/sample-service-1/credentials/activate
+# 4. Restart your service to apply the configuration
