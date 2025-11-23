@@ -49,5 +49,5 @@ zcm:
   sdk:
     ping:
       hash-mock:
-        enabled: false  # Enable mock hash
+        enabled: true  # Enable mock hash
         strategy: RANDOM  # OR DETERMINISTIC, STATIC
