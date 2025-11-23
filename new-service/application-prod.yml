@@ -1,0 +1,78 @@
+# new-service - Base configuration
+# Generated config file for service: new-service
+# Environments: dev
+
+spring:
+  application:
+    name: new-service
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  main:
+    banner-mode: "off"
+  threads:
+    virtual:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,env,prometheus"
+
+logging:
+  level:
+    root: INFO
+    com.example.new-service: INFO
+
+# ZCM SDK Configuration
+# This section configures the ZCM SDK for configuration management and service discovery
+zcm:
+  sdk:
+    service:
+      name: new-service
+    config:
+      server:
+        url: ${CONFIG_SERVER_URL:http://config-server:8888}
+    control:
+      url: ${CONFIG_CONTROL_URL:http://config-control-service:8080}
+    ping:
+      enabled: true
+      fixed-delay: 30000  # 30 seconds
+      protocol: HTTP  # Options: HTTP, THRIFT, GRPC, KAFKA
+      service-discovery-name: config-control-service
+      # Client credentials for M2M authentication
+      # Uncomment and fill in after activating credentials via POST /api/services/{serviceId}/credentials/activate
+      client-credentials:
+        required: true
+        client-id: new-service
+        # client-secret: <your-client-secret>  # Get from GET /api/services/new-service/credentials
+        token-endpoint: http://10.40.30.161:28080/realms/config-control/protocol/openid-connect/token
+        realm: config-control
+    bus:
+      refresh:
+        enabled: true
+        topic: springCloudBus
+      kafka:
+        bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
+    discovery:
+      provider: CONSUL
+      consul:
+        host: ${CONSUL_HOST:localhost}
+        port: ${CONSUL_PORT:8500}
+        register: true
+        heartbeat:
+          enabled: true
+          ttl: 10s
+
+# Service-specific configuration
+service:
+  id: new-service
+  name: new-service
+  version: 1.0.0
+
+# Configuration Instructions:
+# 1. After approval, retrieve client credentials: GET /api/services/new-service/credentials
+# 2. Uncomment and fill in the client-credentials section above
+# 3. Activate credentials: POST /api/services/new-service/credentials/activate
+# 4. Restart your service to apply the configuration
