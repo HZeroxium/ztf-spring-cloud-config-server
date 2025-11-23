@@ -41,3 +41,10 @@ demo:
   status:
     badge: "PRODUCTION"
     badgeColor: "#F44336"
+
+zcm:
+  sdk:
+    ping:
+      hash-mock:
+        enabled: false  # Enable mock hash
+        strategy: RANDOM  # OR DETERMINISTIC, STATIC

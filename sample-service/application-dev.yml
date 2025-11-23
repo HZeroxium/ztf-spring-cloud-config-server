@@ -44,3 +44,10 @@ demo:
   status:
     badge: "DEVELOPMENT"
     badgeColor: "#4CAF50"
+
+zcm:
+  sdk:
+    ping:
+      hash-mock:
+        enabled: false  # Enable mock hash
+        strategy: RANDOM  # OR DETERMINISTIC, STATIC
